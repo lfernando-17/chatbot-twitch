@@ -9,11 +9,12 @@
 int main(void) {
  // Inicio do Login
 char str2[TAM],user[TAM],passw[TAM],passw1[TAM],email[TAM];
+begin:
  printf("Entre na sua conta Twitch para acessar o ChatBot : \n \nLogin / Cadastre-se : \n");
  gets(str2);
   if(strstr(str2,"Login")!=0 || strstr(str2,"login")!=0)
       {char login[100],password[100];
-begin:
+
 printf("\nUsuário :  ");
 gets(login);
 printf("\nSenha :  ");
@@ -59,7 +60,12 @@ else if (strcmp(login,log)==0 && strcmp(password,pass)!=0)
            {
              printf("\nCadastro Realizado !");
            }
-      }   
+      }
+         else 
+           {
+             printf("\n\nERRO \n\n Tente Novamente \n\n");
+             goto begin;
+           }   
 //Fim do Login
 
 
